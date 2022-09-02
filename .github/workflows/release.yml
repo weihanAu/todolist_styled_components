@@ -2,8 +2,8 @@ name: Release using conventional commits (master branch)
 
 on:
   push:
-   tags:
-     - "v*"
+   branches:
+     - master
 
 jobs:
   release:
