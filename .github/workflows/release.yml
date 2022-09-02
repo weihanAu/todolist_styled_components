@@ -2,8 +2,8 @@ name: Release using conventional commits (master branch)
 
 on:
   push:
-   branches:
-     - master
+   tags:
+     - 'v*'
 
 jobs:
   release:
@@ -12,15 +12,6 @@ jobs:
    steps:
     - name: checkout
       uses: actions/checkout@v2
-
-    - name: conventional changelog action
-      id: changelog
-      # https://github.com/TriPSs/conventional-changelog-action
-      uses: TriPSs/conventional-changelog-action@latest
-      with:
-        # you can also create separate token to trace action
-        github-token: "${{ secrets.GITHUB_TOKEN }}"
-        skip-on-empty : false 
 
     - name: create release
       # https://github.com/actions/create-release
