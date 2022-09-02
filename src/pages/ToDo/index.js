@@ -47,7 +47,7 @@ const Todo = () => {
 
   return (
     <section>
-      <h1>i am new2</h1>
+      <h1>i am new2s</h1>
      <Card todoCard>
      <input value={userInput} onChange={(e)=>{setUserInput(e.target.value)}}/>
      <Button primary name={'add a event'} onClick={addClickHandler} />
